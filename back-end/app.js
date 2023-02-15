@@ -78,5 +78,12 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+      text: 'My name is Kevin Gong and I am currently a junior with a major in Computer Science and a minor in Mathematics. My hobbies include playing tennis, skiing, and playing the oboe. I am taking Dev Ops because I want to gain experience working with technologies currently used in the industry such as the MERN stack and familiarize myself with the agile framework.', 
+      imageURL: 'kevin.jpeg'
+    })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
